@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.gauge.facebook4j</groupId>
 	<artifactId>facebook4j-core</artifactId>
-	<version>4.0.0-SNAPSHOT</version>
+	<version>4.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>facebook4j-core</name>
 	<description>A Java library for the Facebook Graph API</description>
@@ -21,13 +21,26 @@
 		<developerConnection>scm:git:ssh://git@github.com/felipeAndrade0918/facebook4j.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+	<mailingLists>
+		<mailingList>
+			<name>Facebook4J</name>
+			<subscribe>facebook4j+subscribe@googlegroups.com</subscribe>
+			<unsubscribe>facebook4j+unsubscribe@googlegroups.com</unsubscribe>
+			<post>facebook4j@googlegroups.com</post>
+			<archive>http://groups.google.com/group/facebook4j</archive>
+		</mailingList>
+	</mailingLists>
 	<developers>
 		<developer>
-			<id>felipeAndrade0918</id>
-			<name>Felipe Andrade</name>
+			<id>matheusaugusto1994</id>
+			<name>Matheus</name>
+			<email>m.augusto1994@gmail.com</email>
 			<roles>
+				<role>lead</role>
+				<role>architect</role>
 				<role>developer</role>
 			</roles>
+			<timezone>-3</timezone>
 		</developer>
 	</developers>
 	<distributionManagement>
@@ -44,7 +57,7 @@
 			<layout>default</layout>
 		</snapshotRepository>
 	</distributionManagement>
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -76,33 +89,6 @@
 	</dependencies>
 
 	<profiles>
-		<profile>
-			<id>release-sign-artifacts</id>
-			<activation>
-				<property>
-					<name>performRelease</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.6</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
 		<profile>
 			<id>jenkins</id>
 			<activation>
@@ -142,14 +128,14 @@
 			</build>
 		</profile>
 		<profile>
-			<!-- javadoc 8 workaround: http://stackoverflow.com/a/34591533/122441 -->
+		<!-- javadoc 8 workaround: http://stackoverflow.com/a/34591533/122441 -->
 			<id>disable-java8-doclint</id>
-			<activation>
-				<jdk>[1.8,)</jdk>
-			</activation>
-			<properties>
-				<additionalparam>-Xdoclint:none</additionalparam>
-			</properties>
+		 	<activation>
+		    	<jdk>[1.8,)</jdk>
+		  	</activation>
+		  	<properties>
+		    	<additionalparam>-Xdoclint:none</additionalparam>
+		  	</properties>
 		</profile>
 	</profiles>
 

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.gauge.facebook4j</groupId>
 	<artifactId>facebook4j</artifactId>
-	<version>4.0.0-SNAPSHOT</version>
+	<version>4.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>facebook4j</name>
 	<description>A Java library for the Facebook Graph API</description>
@@ -17,16 +17,30 @@
 	</licenses>
 	<scm>
 		<url>https://github.com/felipeAndrade0918/facebook4j</url>
-  <connection>scm:git:git://github.com/felipeAndrade0918/facebook4j.git</connection>
-  <developerConnection>scm:git:ssh://git@github.com/felipeAndrade0918/facebook4j.git</developerConnection>
+		<connection>scm:git:git://github.com/felipeAndrade0918/facebook4j.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/felipeAndrade0918/facebook4j.git</developerConnection>
+		<tag>HEAD</tag>
 	</scm>
+	<mailingLists>
+		<mailingList>
+			<name>Facebook4J</name>
+			<subscribe>facebook4j+subscribe@googlegroups.com</subscribe>
+			<unsubscribe>facebook4j+unsubscribe@googlegroups.com</unsubscribe>
+			<post>facebook4j@googlegroups.com</post>
+			<archive>http://groups.google.com/group/facebook4j</archive>
+		</mailingList>
+	</mailingLists>
 	<developers>
 		<developer>
-			<id>felipeAndrade0918</id>
-			<name>Felipe Andrade</name>
+			<id>matheusaugusto1994</id>
+			<name>Matheus</name>
+			<email>m.augusto1994@gmail.com</email>
 			<roles>
+				<role>lead</role>
+				<role>architect</role>
 				<role>developer</role>
 			</roles>
+			<timezone>-3</timezone>
 		</developer>
 	</developers>
 	<distributionManagement>
